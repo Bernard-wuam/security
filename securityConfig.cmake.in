@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+ include("${CMAKE_CURRENT_LIST_DIR}/SecurityTargets.cmake")
+
+find_dependency(boost_json CONFIG REQUIRED)
+find_dependency(boost_beast CONFIG REQUIRED)
+
+ set_and_check(Security_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/include/security")
+
+ set(Security_FOUND TRUE)
